@@ -4,10 +4,10 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div className='footer'>
-            <p>Copyright © 2026 Inovantara. All Rights Reserved</p>
+            <p>© 2026 Inovantara ITS · Proyek Sosial PF Muda Pertamina Foundation. All Rights Reserved.</p>
             <ul>
+                <li>Kebijakan Privasi</li>
                 <li>Syarat & Ketentuan</li>
-                <li>Privasi</li>
             </ul>
         </div>
     )

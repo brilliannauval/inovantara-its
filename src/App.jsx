@@ -15,14 +15,14 @@ const App = () => {
       <Navbar />
       <Hero />
       <div className="container">
-        <Title subTitle='Program' title='Jelajahi Program Kami' />
+        <Title subTitle='Pilar Inovasi' title='Ekosistem Biochar Berkelanjutan' />
         <Programs />
         <About />
-        <Title subTitle='Galeri Foto' title='Aktivitas Kami' />
+        <Title subTitle='Dokumentasi Kegiatan' title='Aktivitas Pemberdayaan Petani' />
         <Campus />
-        <Title subTitle='Testimoni' title='Apa Kata Mereka' />
+        <Title subTitle='Dampak & Kolaborasi' title='Suara Mitra & Pembimbing' />
         <Testimonials />
-        <Title subTitle='Kontak Kami' title='Hubungi Kami' />
+        <Title subTitle='Hubungi Kami' title='Mari Bersinergi Membangun Desa' />
         <Contact />
         <Footer />
       </div>

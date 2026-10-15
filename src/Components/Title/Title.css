@@ -1,15 +1,42 @@
 .title {
     text-align: center;
-    color: #212EA0;
+    color: #15803d;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
-    margin: 70px 0 30px;
+    letter-spacing: 1.5px;
+    margin: 80px 0 35px;
 }
 
 .title h2 {
-    font-size: 32px;
-    color: #000F38;
-    margin-top: 5px;
+    font-size: 34px;
+    color: #064e3b;
+    margin-top: 6px;
     text-transform: none;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 850px) {
+    .title {
+        margin: 60px 0 25px;
+        font-size: 14px;
+    }
+
+    .title h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        margin: 50px 0 20px;
+        font-size: 13px;
+        letter-spacing: 1px;
+    }
+
+    .title h2 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
 }

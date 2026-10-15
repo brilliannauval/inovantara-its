@@ -5,28 +5,29 @@ import play_icon from '../../assets/play-icon.png'
 
 const About = () => {
     return (
-        <div className='about'>
+        <div className='about' id='about'>
             <div className="about-left">
-                <img src={about_img} alt="" className='about-img' />
-                <img src={play_icon} alt="" className='play-icon' />
+                <img src={about_img} alt="Pemberdayaan Petani Pisang Inovantara" className='about-img' />
+                <img src={play_icon} alt="Putar Video Dokumentasi" className='play-icon' />
             </div>
             <div className="about-right">
-                <h3>Tentang Kami</h3>
-                <h2>Lebih dari Sekadar Komunitas</h2>
-                <p>Di Inovantara, kami percaya bahwa perubahan terbesar datang dari pemberdayaan komunitas.
-                    Sejak didirikan pada tahun 2026, kami telah berdedikasi untuk menciptakan
-                    platform inovasi yang inklusif, di mana ide-ide hebat dapat tumbuh dan berkembang
+                <h3>Tentang Inovantara</h3>
+                <h2>Inovasi Nusantara untuk Resiliensi Sosial & Pertanian</h2>
+                <p>
+                    INOVANTARA membangun ekosistem biochar berbasis limbah batang pisang sebagai pembenah tanah
+                    untuk meningkatkan retensi air, struktur tanah, dan efisiensi hara pada lahan kering
+                    dan miskin bahan organik di Desa Galis, Pamekasan, Jawa Timur.
                 </p>
                 <p>
-                    Kami tidak hanya menyediakan sumber daya dan mentorship, tetapi juga membangun ekosistem
-                    yang kolaboratif di mana para inovator dapat saling menginspirasi dan mendukung
-                    perjalanan satu sama lain. Dari startup tahap awal hingga proyek berskala besar,
-                    kami hadir untuk membantu mewujudkan visi Anda.
+                    Dengan konsep <em>waste-to-value</em>, kami mengintegrasikan pemberdayaan petani, teknologi tepat guna drum kiln portable,
+                    standardisasi mutu, BioBank desa dengan Carbon Point, hingga pemasaran digital dengan QR traceability.
                 </p>
-                <p>
-                    Bergabunglah dengan kami dan menjadi bagian dari gerakan yang mengubah ide menjadi
-                    dampak nyata!
-                </p>
+                <div className="about-highlights">
+                    <div className="highlight-item">✓ Mitra 31 Petani Kelompok SHINTA II</div>
+                    <div className="highlight-item">✓ Dosen Pembimbing Dept. Teknik Material ITS</div>
+                    <div className="highlight-item">✓ Pemanfaatan Limbah Pisang ≥70%</div>
+                    <div className="highlight-item">✓ Sinergi BUMDes & Ekonomi Sirkular</div>
+                </div>
             </div>
         </div>
     )

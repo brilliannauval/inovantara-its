@@ -1,14 +1,34 @@
 import React from 'react'
 import './Hero.css'
 import dark_arrow from '../../assets/dark-arrow.png'
+import { Link } from 'react-scroll'
 
 const Hero = () => {
     return (
-        <div className='hero container'>
+        <div className='hero container' id='hero'>
             <div className="hero-text">
-                <h1>Kami membangun inovasi resiliensi sosial</h1>
-                <p>Solusi inovasi kami didesain untuk memperkuat komunitas dan mendorong pertumbuhan yang berkelanjutan</p>
-                <button className='btn'>Jelajahi Program Kami <img src={dark_arrow} alt="" /></button>
+                <span className="hero-badge">Proyek Sosial PF Muda 2026 · Resiliensi Sosial</span>
+                <h1>Pemberdayaan Petani Pisang Desa Galis Melalui Biochar</h1>
+                <p>Mengubah limbah batang pisang menjadi biochar bernilai tambah untuk meningkatkan kesuburan tanah dan kesejahteraan petani melalui ekosistem ekonomi sirkular desa.</p>
+                <div className="hero-stats">
+                    <div className="stat">
+                        <strong>31</strong>
+                        <span>Petani Mitra</span>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat">
+                        <strong>≥70%</strong>
+                        <span>Limbah Termanfaatkan</span>
+                    </div>
+                    <div className="stat-divider"></div>
+                    <div className="stat">
+                        <strong>10-20 kg</strong>
+                        <span>Biochar / Siklus</span>
+                    </div>
+                </div>
+                <Link to='program' smooth={true} offset={-260} duration={500}>
+                    <button className='btn'>Jelajahi Program Kami <img src={dark_arrow} alt="" /></button>
+                </Link>
             </div>
         </div>
     )

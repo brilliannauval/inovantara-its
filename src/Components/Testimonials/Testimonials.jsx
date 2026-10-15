@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import './Testimonials.css'
 import next_icon from '../../assets/next-icon.png'
 import back_icon from '../../assets/back-icon.png'
@@ -8,95 +8,104 @@ import user_3 from '../../assets/user-3.png'
 import user_4 from '../../assets/user-4.png'
 
 const Testimonials = () => {
-
     const slider = useRef();
-    let tx = 0;
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth <= 850);
+        };
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const maxIndex = isMobile ? 3 : 2;
 
     const slideForward = () => {
-        if (tx > -50) {
-            tx -= 25;
+        if (currentIndex < maxIndex) {
+            const next = currentIndex + 1;
+            setCurrentIndex(next);
+            const step = isMobile ? 25 : 25;
+            slider.current.style.transform = `translateX(-${next * step}%)`;
         }
-        slider.current.style.transform = `translateX(${tx}%)`;
     }
 
     const slideBackward = () => {
-        if (tx < 0) {
-            tx += 25;
+        if (currentIndex > 0) {
+            const prev = currentIndex - 1;
+            setCurrentIndex(prev);
+            const step = isMobile ? 25 : 25;
+            slider.current.style.transform = `translateX(-${prev * step}%)`;
         }
-        slider.current.style.transform = `translateX(${tx}%)`;
     }
 
     return (
-        <div className='testimonials'>
-            <img src={next_icon} alt="" className='next-btn' onClick={slideForward} />
-            <img src={back_icon} alt="" className='back-btn' onClick={slideBackward} />
+        <div className='testimonials' id='testimonials'>
+            <img src={next_icon} alt="Next" className='next-btn' onClick={slideForward} />
+            <img src={back_icon} alt="Previous" className='back-btn' onClick={slideBackward} />
             <div className="slider">
                 <ul ref={slider}>
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_1} alt="" />
+                                <img src={user_1} alt="Dr. Anna Zakiyatul Laila" />
                                 <div>
-                                    <h3>Dr. Anna</h3>
-                                    <span>Dosen Teknik Material ITS</span>
+                                    <h3>Dr. Anna Zakiyatul Laila</h3>
+                                    <span>Dosen Pembimbing Teknik Material ITS</span>
                                 </div>
                             </div>
                             <p>
-                                Inovantara telah memberikan dampak yang signifikan
-                                bagi komunitas. Program-program yang ditawarkan sangat relevan
-                                dengan kebutuhan masyarakat dan memberikan solusi inovatif untuk
-                                berbagai permasalahan sosial.
+                                "Inisiatif Inovantara membawa pendekatan ilmiah yang aplikatif.
+                                Pemanfaatan limbah batang pisang menjadi biochar terbukti secara uji
+                                FTIR & SEM memiliki struktur pori dan kapasitas retensi air yang sangat baik untuk tanah kering Galis."
                             </p>
                         </div>
                     </li>
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_2} alt="" />
+                                <img src={user_2} alt="Ketua Kelompok Tani SHINTA II" />
                                 <div>
-                                    <h3>Yusup</h3>
-                                    <span>Mentor Inovantara</span>
+                                    <h3>Pak Mat Sani</h3>
+                                    <span>Ketua Kelompok Tani SHINTA II Galis</span>
                                 </div>
                             </div>
                             <p>
-                                Inovantara telah memberikan dampak yang signifikan
-                                bagi komunitas. Program-program yang ditawarkan sangat relevan
-                                dengan kebutuhan masyarakat dan memberikan solusi inovatif untuk
-                                berbagai permasalahan sosial.
+                                "Sebelumnya limbah batang pisang hanya dibakar atau dibiarkan membusuk.
+                                Dengan pelatihan drum kiln portable dari adik-adik Inovantara, kami bisa memproduksi pupuk biochar mandiri
+                                untuk menyuburkan tanah kebun kami."
                             </p>
                         </div>
                     </li>
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_3} alt="" />
+                                <img src={user_3} alt="Reni Nurdiana" />
                                 <div>
-                                    <h3>Rina</h3>
-                                    <span>Alumni Program</span>
+                                    <h3>Reni Nurdiana</h3>
+                                    <span>Ketua Tim Proyek Inovantara ITS</span>
                                 </div>
                             </div>
                             <p>
-                                Inovantara telah memberikan dampak yang signifikan
-                                bagi komunitas. Program-program yang ditawarkan sangat relevan
-                                dengan kebutuhan masyarakat dan memberikan solusi inovatif untuk
-                                berbagai permasalahan sosial.
+                                "Melalui integrasi BioBank Desa dan QR traceability, warga mendapatkan insentif Carbon Point
+                                dari setiap limbah yang disetor. Ini mewujudkan ekonomi sirkular desa yang mandiri dan berkelanjutan."
                             </p>
                         </div>
                     </li>
                     <li>
                         <div className="slide">
                             <div className="user-info">
-                                <img src={user_4} alt="" />
+                                <img src={user_4} alt="Perwakilan BUMDes Galis" />
                                 <div>
-                                    <h3>Budi</h3>
-                                    <span>Mahasiswa ITB</span>
+                                    <h3>BUMDes & Pemdes Galis</h3>
+                                    <span>Mitra Kelembagaan & Distribusi</span>
                                 </div>
                             </div>
                             <p>
-                                Inovantara telah memberikan dampak yang signifikan
-                                bagi komunitas. Program-program yang ditawarkan sangat relevan
-                                dengan kebutuhan masyarakat dan memberikan solusi inovatif untuk
-                                berbagai permasalahan sosial.
+                                "Program PF Muda Inovantara memberikan modal teknologi permanen bagi desa.
+                                CAPEX 72,3% langsung terkonversi menjadi alat produksi yang dikelola desa untuk kesejahteraan petani."
                             </p>
                         </div>
                     </li>
