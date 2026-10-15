@@ -29,30 +29,20 @@
     padding: 100px 20px 40px;
     position: relative;
     z-index: 2;
-}
-
-.hero-badge {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    background: rgba(34, 197, 94, 0.18);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(134, 239, 172, 0.35);
-    color: #bbf7d0;
-    padding: 8px 22px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    letter-spacing: 0.5px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
-    animation: fadeInDown 0.8s ease-out;
 }
 
-.hero-badge::before {
-    content: '🌱';
-    font-size: 14px;
+.hero-subtitle {
+    color: #86efac;
+    font-size: 14.5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    display: block;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-text h1 {
@@ -66,7 +56,7 @@
 
 .hero-text p {
     max-width: 720px;
-    margin: 18px auto 32px;
+    margin: 18px auto 30px;
     line-height: 1.65;
     font-size: 17px;
     color: #e2e8f0;
@@ -78,15 +68,20 @@
     align-items: center;
     justify-content: center;
     gap: 32px;
-    margin-bottom: 38px;
+    margin-bottom: 28px;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.12);
     padding: 16px 28px;
     border-radius: 20px;
-    display: inline-flex;
     animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.hero-btn-wrapper {
+    display: block;
+    margin-top: 4px;
+    animation: fadeInUp 0.8s ease-out 0.8s both;
 }
 
 .stat {
@@ -153,6 +148,7 @@
     .hero-stats {
         gap: 20px;
         padding: 12px 20px;
+        margin-bottom: 22px;
     }
 
     .stat strong {
@@ -173,10 +169,10 @@
         padding: 95px 12px 30px;
     }
 
-    .hero-badge {
-        font-size: 11px;
-        padding: 6px 14px;
-        margin-bottom: 16px;
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
     }
 
     .hero-text h1 {
@@ -186,7 +182,7 @@
 
     .hero-text p {
         font-size: 13.5px;
-        margin: 12px auto 22px;
+        margin: 12px auto 20px;
         line-height: 1.55;
     }
 
@@ -197,7 +193,7 @@
         justify-content: space-between;
         gap: 8px;
         padding: 10px 14px;
-        margin-bottom: 26px;
+        margin-bottom: 20px;
     }
 
     .stat strong {

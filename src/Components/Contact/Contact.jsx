@@ -48,7 +48,7 @@ const Contact = () => {
                 <ul>
                     <li><img src={mail_icon} alt="Email" />inovantara.its@gmail.com</li>
                     <li><img src={phone_icon} alt="Telepon" />+62 812-3456-7890</li>
-                    <li><img src={location_icon} alt="Lokasi" />Institut Teknologi Sepuluh Nopember (ITS), Surabaya <br /> & Dusun Galis Tengah, Kec. Galis, Kab. Pamekasan</li>
+                    <li><img src={location_icon} alt="Lokasi" />Institut Teknologi Sepuluh Nopember (ITS), Surabaya</li>
                 </ul>
             </div>
             <div className="contact-col">

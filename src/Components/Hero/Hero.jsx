@@ -7,7 +7,7 @@ const Hero = () => {
     return (
         <div className='hero container' id='hero'>
             <div className="hero-text">
-                <span className="hero-badge">Proyek Sosial PF Muda 2026 · Resiliensi Sosial</span>
+                <p className="hero-subtitle">Proyek Sosial PF Muda 2026 · Resiliensi Sosial</p>
                 <h1>Pemberdayaan Petani Pisang Desa Galis Melalui Biochar</h1>
                 <p>Mengubah limbah batang pisang menjadi biochar bernilai tambah untuk meningkatkan kesuburan tanah dan kesejahteraan petani melalui ekosistem ekonomi sirkular desa.</p>
                 <div className="hero-stats">
@@ -26,9 +26,11 @@ const Hero = () => {
                         <span>Biochar / Siklus</span>
                     </div>
                 </div>
-                <Link to='program' smooth={true} offset={-260} duration={500}>
-                    <button className='btn'>Jelajahi Program Kami <img src={dark_arrow} alt="" /></button>
-                </Link>
+                <div className="hero-btn-wrapper">
+                    <Link to='program' smooth={true} offset={-260} duration={500}>
+                        <button className='btn'>Jelajahi Program Kami <img src={dark_arrow} alt="" /></button>
+                    </Link>
+                </div>
             </div>
         </div>
     )

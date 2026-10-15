@@ -70,23 +70,6 @@
     font-size: 15.5px;
 }
 
-.about-highlights {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-    margin-top: 20px;
-}
-
-.highlight-item {
-    background: #ecfdf5;
-    border-left: 3px solid #15803d;
-    padding: 10px 14px;
-    border-radius: 0 8px 8px 0;
-    font-size: 13.5px;
-    color: #064e3b;
-    font-weight: 500;
-}
-
 @media (max-width: 900px) {
     .about {
         flex-direction: column;
@@ -143,10 +126,5 @@
 
     .play-icon {
         width: 48px;
-    }
-
-    .about-highlights {
-        grid-template-columns: 1fr;
-        gap: 8px;
     }
 }

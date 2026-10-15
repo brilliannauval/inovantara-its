@@ -22,12 +22,6 @@ const About = () => {
                     Dengan konsep <em>waste-to-value</em>, kami mengintegrasikan pemberdayaan petani, teknologi tepat guna drum kiln portable,
                     standardisasi mutu, BioBank desa dengan Carbon Point, hingga pemasaran digital dengan QR traceability.
                 </p>
-                <div className="about-highlights">
-                    <div className="highlight-item">✓ Mitra 31 Petani Kelompok SHINTA II</div>
-                    <div className="highlight-item">✓ Dosen Pembimbing Dept. Teknik Material ITS</div>
-                    <div className="highlight-item">✓ Pemanfaatan Limbah Pisang ≥70%</div>
-                    <div className="highlight-item">✓ Sinergi BUMDes & Ekonomi Sirkular</div>
-                </div>
             </div>
         </div>
     )
